@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import ListaEstudiantesFuncion from "./listaEstudiantesFuncion";
+import ListaEstudiantesClase from "./listaEstudiantesClase";
+import PokemonComponent from "./PokemonComponent";
+
+const listaEstudiantes = [
+  {nombre: 'John', apellido: 'Smith', edad: 24}, 
+  {nombre: 'Sara', apellido: 'Jones', edad: 32}, 
+  {nombre: 'Tim', apellido: 'Brown', edad: 19}, 
+  {nombre: 'Alice', apellido: 'Williams', edad: 28}, 
+  {nombre: 'David', apellido: 'Miller', edad: 22}, 
+  {nombre: 'Kate', apellido:'Wilson', edad: 26}
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <ListaEstudiantesFuncion listaEstudiantes={listaEstudiantes} />
+      <ListaEstudiantesClase listaEstudiantes={listaEstudiantes} />
+      <PokemonComponent />
     </div>
-  );
+  )
 }
 
 export default App;
